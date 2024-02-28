@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useId, useState } from "react";
+import styled from "styled-components";
+const Text1 = styled.p`
+  color: orangered;
+  font-weight: bold;
+`;
+const Text2 = styled.p`
+  font-style: italic;
+  color: brown;
+`;
 
+const Text3 = styled.p`
+  background-color: orange;
+  font-weight: bold;
+  color: white;
+`;
+// const Container = styled.div`
+//   width: 200px;
+//   border: 2px solid brown;
+//   padding: 10px;
+//   text-align: center;
+// `;
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+`;
+
+const Input = styled.input`
+  margin: 5px;
+  font-size: 18px;
+`;
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Text1>text</Text1>
+      <Text2>text</Text2>
+      <Text3>text</Text3>
+    </Container>
   );
 }
-
 export default App;
